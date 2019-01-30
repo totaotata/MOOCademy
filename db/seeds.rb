@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+5.times do
+  lesson = Lesson.create!(title: Faker::Dessert.variety, body: Faker::Dessert.topping, course_id: 1)
+end
